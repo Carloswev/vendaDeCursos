@@ -1,0 +1,305 @@
+/* Reseta o estilo padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #1C1C1C; /* Preto como cor de fundo */
+    color: #FFF; /* Texto em branco */
+  }
+  
+  /* Estilização do Cabeçalho */
+  header .top-header {
+    background-color: #2C2C2C; /* Tom mais claro de preto */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+  
+  header .main-header {
+    background-color: #e50914; /* Vermelho vibrante */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 2rem;
+  }
+  
+  header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  header nav ul li {
+    margin-left: 30px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+  
+  header nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  header .user-actions a {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .botao-login {
+    background-color: #333;
+    border: 2px solid white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botao-login:hover {
+    background-color: #e50914;
+  }
+  
+  .botao-cadastro {
+    background-color: #e50914;
+    border: 2px solid white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botao-cadastro:hover {
+    background-color: white;
+    color: #e50914;
+  }
+  
+  /* Banner com animação de entrada */
+  .banner {
+    background: url('banner.jpg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: fadeInBanner 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeInBanner {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
+  .conteudo-banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .conteudo-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn-explorar {
+    background-color: #e50914;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .btn-explorar:hover {
+    background-color: white;
+    color: #e50914;
+    border-color: #e50914;
+  }
+  
+  /* Seção de Trilhas, Planos e Cursos */
+  .trilhas, .planos, .cursos, .sobre {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .grade-trilhas, .grade-planos, .grade-cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .trilha, .plano, .curso {
+    background-color: #2C2C2C;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #e50914;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .trilha:hover, .plano:hover, .curso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Footer estilizado */
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    background-color: #2C2C2C;
+    color: white;
+    flex-wrap: wrap;
+  }
+  
+  .footer-links h3 {
+    font-size: 1.2rem;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #e50914;
+  }
+  
+  .social-media {
+    background-color: #e50914;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+  }
+  
+  .social-media img {
+    width: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-media img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    header .main-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    header nav ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    .conteudo-banner h1 {
+      font-size: 2.5rem;
+    }
+  
+    .conteudo-banner p {
+      font-size: 1rem;
+    }
+  
+    .grade-trilhas, .grade-planos, .grade-cursos {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+.catalogo {
+    padding: 50px 20px;
+}
+
+.catalogo h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem; 
+}
+
+.grade-cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    justify-items: center; /
+}
+
+.curso {
+    background-color: #2C2C2C;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #e50914;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px; 
+}
+
+.curso img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.curso img:hover {
+    transform: scale(1.05);
+}
+
+.curso h3 {
+    margin: 15px 0 10px; 
+    font-size: 1.5rem; 
+}
+
+.curso p {
+    margin-bottom: 15px; 
+}
+
+
+@media (max-width: 768px) {
+    .catalogo h2 {
+        font-size: 2rem; 
+    }
+}
